@@ -3,325 +3,109 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Neck Comfort Guide</title>
-  <meta name="description" content="A quick, simple explanation of why many pillows can feel wrong—and what people are switching to." />
+  <title>Neck Pain? Quick 30s Check</title>
 
   <style>
-    :root{
-      --bg:#070b12;
-      --card:#0f1624;
-      --card2:#0b1220;
-      --text:#eaf0ff;
-      --muted:#b9c3da;
-      --line:rgba(255,255,255,.10);
-      --accent:#ff7a00;
-      --accent2:#ff9b3d;
-      --shadow: 0 24px 80px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 980px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 70% -10%, rgba(255,122,0,.22), transparent 60%),
-        radial-gradient(900px 600px at 10% 20%, rgba(110,170,255,.14), transparent 55%),
-        linear-gradient(180deg, #05070c 0%, var(--bg) 60%, #05070c 100%);
-      min-height:100vh;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 42px;}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; opacity:.95;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
-    }
-    .dot{width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px rgba(255,122,0,.18);}
-    .pill{
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line); border-radius:999px;
-      padding:8px 12px; background:rgba(255,255,255,.04);
-      white-space:nowrap;
-    }
-
-    .hero{
-      margin-top:18px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .hero-inner{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:18px;
-      padding:26px;
-    }
-    @media (max-width: 860px){
-      .hero-inner{grid-template-columns:1fr; padding:20px;}
-    }
-
-    .kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:13px; color:var(--muted);
-      border:1px solid var(--line); border-radius:999px;
-      padding:8px 12px; background:rgba(0,0,0,.20);
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size: clamp(30px, 4.2vw, 52px);
-      line-height:1.05;
-      letter-spacing:-.6px;
-    }
-    .sub{
-      font-size: clamp(15px, 1.6vw, 18px);
-      line-height:1.6;
-      color:var(--muted);
-      margin:0 0 18px;
-      max-width: 58ch;
-    }
-    .bullets{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-    .bullets li{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:10px 12px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(0,0,0,.18);
-      color:var(--text);
-    }
-    .check{
-      width:18px; height:18px; border-radius:6px;
-      background:rgba(255,122,0,.18);
-      border:1px solid rgba(255,122,0,.35);
-      display:grid; place-items:center;
-      margin-top:2px;
-      flex:0 0 18px;
-    }
-    .check:before{content:"✓"; font-size:12px; color:var(--accent2); font-weight:900;}
-
-    .side{
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(0,0,0,.22);
-      padding:18px;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#06090f;
+      color:white;
       display:flex;
-      flex-direction:column;
-      gap:12px;
-      align-self:start;
-    }
-    .side h3{margin:0; font-size:16px; letter-spacing:-.2px;}
-    .mini{margin:0; color:var(--muted); line-height:1.55; font-size:13px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      width:100%;
-      border:none;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-      color:#1b1207;
-      font-weight:900;
-      padding:14px 16px;
-      border-radius:14px;
-      cursor:pointer;
-      font-size:16px;
-      text-decoration:none;
-      box-shadow: 0 16px 38px rgba(255,122,0,.18);
-      transition: transform .08s ease, filter .12s ease;
-    }
-    .btn:hover{transform: translateY(-1px); filter:saturate(1.08);}
-    .btn:active{transform: translateY(0px);}
-
-    .btn-ghost{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:100%;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      font-weight:800;
-      padding:12px 14px;
-      border-radius:14px;
-      cursor:pointer;
-      font-size:14px;
-      text-decoration:none;
-    }
-
-    .section{
-      margin-top:18px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background: rgba(0,0,0,.18);
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
       padding:20px;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width: 860px){
-      .grid{grid-template-columns:1fr;}
-    }
-    .card{
-      border:1px solid var(--line);
-      border-radius:18px;
-      background: rgba(255,255,255,.03);
-      padding:14px;
-    }
-    .card b{display:block; margin-bottom:6px}
-    .card p{margin:0; color:var(--muted); line-height:1.6; font-size:13px}
 
-    .divider{height:1px; background:var(--line); margin:16px 0;}
-    .foot{
-      margin-top:14px;
-      color:rgba(185,195,218,.85);
-      font-size:12px;
-      line-height:1.55;
-      opacity:.95;
+    .box{
+      max-width:700px;
+      background:#0f1725;
+      padding:40px;
+      border-radius:14px;
+      box-shadow:0 20px 60px rgba(0,0,0,.6);
     }
-    .foot a{color:#d7e2ff; text-decoration:underline; text-underline-offset:3px;}
+
+    h1{
+      font-size:32px;
+      margin-bottom:15px;
+      line-height:1.2;
+    }
+
+    p{
+      color:#cbd5e1;
+      line-height:1.6;
+    }
+
+    ul{
+      margin:20px 0;
+      padding-left:20px;
+      color:#e2e8f0;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .btn{
+      margin-top:25px;
+      width:100%;
+      padding:16px;
+      background:#ff8a2a;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      background:#ff7a12;
+    }
+
     .note{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px;
-      border:1px dashed rgba(255,255,255,.18);
-      border-radius:16px;
-      background: rgba(255,255,255,.02);
-      color:var(--muted);
       font-size:12px;
-      line-height:1.55;
+      color:#94a3b8;
+      margin-top:15px;
     }
-    .note strong{color:var(--text)}
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand"><span class="dot"></span> Neck Comfort</div>
-      <div class="pill">Fast read • 30 seconds</div>
-    </div>
 
-    <div class="hero" role="main">
-      <div class="hero-inner">
-        <div>
-          <div class="kicker">⚠️ Waking up stiff? It may not be your mattress.</div>
+  <div class="box">
+    <h1>Morning neck stiffness?<br>Your pillow may be the real cause.</h1>
 
-          <h1>The real reason your pillow can make your neck feel worse.</h1>
-
-          <p class="sub">
-            Most pillows look “soft,” but they often <b>don’t keep your neck aligned</b> for hours.
-            That small mismatch can lead to pressure, stiffness, and restless sleep.
-          </p>
-
-          <ul class="bullets">
-            <li><span class="check"></span><span><b>Too high / too flat</b> can push your neck into an awkward angle.</span></li>
-            <li><span class="check"></span><span><b>Wrong support</b> can let your head sink and strain one side.</span></li>
-            <li><span class="check"></span><span><b>“Soft” isn’t the same as ergonomic</b>—alignment matters more.</span></li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <div class="note">
-            <div>🔎</div>
-            <div>
-              <strong>Quick tip:</strong> If you wake up and immediately rub your neck or rotate your shoulders to “loosen up,”
-              your pillow support is a likely suspect.
-            </div>
-          </div>
-        </div>
-
-        <aside class="side">
-          <h3>Want to see what people are switching to?</h3>
-          <p class="mini">
-            Here’s a short page showing a <b>different pillow design</b> focused on alignment and support.
-          </p>
-
-          <!-- ✅ PONÉ AQUÍ TU LINK FINAL (ClickBank / vendor) -->
-          <a class="btn" id="ctaTop" href="#" rel="nofollow noopener" target="_blank">
-            See the ergonomic design →
-          </a>
-
-          <a class="btn-ghost" id="ctaAlt" href="#" rel="nofollow noopener" target="_blank">
-            Watch how it works →
-          </a>
-
-          <p class="mini" style="margin-top:6px;">
-            No signup. Just the explanation + product page.
-          </p>
-        </aside>
-      </div>
-    </div>
-
-    <section class="section" aria-label="What you’ll learn">
-      <b style="font-size:16px; letter-spacing:-.2px;">In the next page you’ll see:</b>
-
-      <div class="grid">
-        <div class="card">
-          <b>1) The common mistake</b>
-          <p>Why “one size fits all” pillows often fail different sleepers.</p>
-        </div>
-        <div class="card">
-          <b>2) The design difference</b>
-          <p>How a shaped support can help keep the neck in a more neutral position.</p>
-        </div>
-        <div class="card">
-          <b>3) Who it’s for</b>
-          <p>Side sleepers, back sleepers, and people who wake up stiff.</p>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <a class="btn" id="ctaBottom" href="#" rel="nofollow noopener" target="_blank">
-        Show me the solution →
-      </a>
-
-      <p class="foot">
-        *Results vary. This page is for informational purposes only and does not provide medical advice.*
-      </p>
-    </section>
-
-    <p class="foot" style="text-align:center; margin-top:16px;">
-      Built for fast reading • <a href="#" id="privacyLink">Privacy-friendly</a>
+    <p>
+      Most pillows fail to properly support your cervical spine.
+      Over 6–8 hours, poor alignment creates pressure and muscle strain.
     </p>
+
+    <ul>
+      <li>If you wake up with neck tightness, your alignment is off.</li>
+      <li>If your chin tilts down while sleeping, that creates strain.</li>
+      <li>If your pillow sinks unevenly, support is compromised.</li>
+    </ul>
+
+    <p>
+      There is a specific ergonomic design that solves this.
+      See how it works in under 2 minutes.
+    </p>
+
+    <button class="btn" onclick="goToOffer()">
+      Watch The Ergonomic Solution →
+    </button>
+
+    <div class="note">
+      *Results vary. This page is informational only.*
+    </div>
   </div>
 
   <script>
-    // ✅ CONFIGURÁ ACÁ TU LINK FINAL (el que querés abrir al hacer click)
-    // Ejemplo: const FINAL_URL = "https://example.com/?tid=...";
-    const FINAL_URL = "PASTE_YOUR_FINAL_URL_HERE";
-
-    // Copia UTMs del anuncio (si existen) y los pasa al link final.
-    const params = new URLSearchParams(window.location.search);
-    const url = new URL(FINAL_URL);
-
-    params.forEach((v, k) => {
-      if (!url.searchParams.has(k)) url.searchParams.set(k, v);
-    });
-
-    // Si querés, forzá un tid si no viene:
-    // if (!url.searchParams.has("tid")) url.searchParams.set("tid", "meta_prelander");
-
-    const out = url.toString();
-
-    document.getElementById("ctaTop").href = out;
-    document.getElementById("ctaAlt").href = out;
-    document.getElementById("ctaBottom").href = out;
-
-    // Link “privacy-friendly” (no hace nada, es solo visual)
-    document.getElementById("privacyLink").addEventListener("click", (e) => {
-      e.preventDefault();
-      alert("This page does not ask for personal data. Links may include tracking parameters for attribution.");
-    });
+    function goToOffer() {
+      window.location.href = "https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net?tid=meta_v3";
+    }
   </script>
+
 </body>
 </html>

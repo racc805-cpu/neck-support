@@ -7,17 +7,25 @@
 
   <!-- ✅ META PIXEL -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-    fbq('init', '171527728343450');
-    fbq('track', 'PageView');
+    fbq("init", "171527728343450");
+    fbq("track", "PageView");
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
@@ -27,14 +35,74 @@
 
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #07101f; color: #ffffff; }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 26px 16px 42px; }
-    .badge { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.03); color: #d2d8e3; font-size: 13px; }
-    .card { background: #0c1629; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 28px 20px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.35); text-align: center; }
-    h1 { margin: 0 0 10px; font-size: 42px; line-height: 1.05; font-weight: 800; letter-spacing: -0.5px; color: #ffffff; }
-    .sub { font-size: 24px; line-height: 1.3; font-weight: 700; color: #ffffff; margin: 0 auto 16px; max-width: 620px; }
-    .precta { font-size: 22px; line-height: 1.35; font-weight: 800; color: #ffffff; margin: 0 auto 8px; max-width: 620px; }
-    .precta-sub { font-size: 17px; line-height: 1.5; color: #cfd6e4; margin: 0 auto 16px; max-width: 620px; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07101f;
+      color: #ffffff;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 26px 16px 42px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      color: #d2d8e3;
+      font-size: 13px;
+    }
+
+    .card {
+      background: #0c1629;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 28px 20px 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+
+    .sub {
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 auto 16px;
+      max-width: 620px;
+    }
+
+    .precta {
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 auto 8px;
+      max-width: 620px;
+    }
+
+    .precta-sub {
+      font-size: 17px;
+      line-height: 1.5;
+      color: #cfd6e4;
+      margin: 0 auto 16px;
+      max-width: 620px;
+    }
 
     .cta {
       display: inline-block;
@@ -52,7 +120,13 @@
       cursor: pointer;
     }
 
-    .cta-note { font-size: 14px; color: #cdd3e0; margin-bottom: 18px; }
+    .cta:active { transform: translateY(1px); }
+
+    .cta-note {
+      font-size: 14px;
+      color: #cdd3e0;
+      margin-bottom: 18px;
+    }
 
     .hero-image {
       width: 100%;
@@ -63,15 +137,51 @@
       box-shadow: 0 12px 28px rgba(0,0,0,0.18);
     }
 
-    .body-copy { font-size: 19px; line-height: 1.6; color: #d5dbea; max-width: 620px; margin: 0 auto 16px; }
+    .body-copy {
+      font-size: 19px;
+      line-height: 1.6;
+      color: #d5dbea;
+      max-width: 620px;
+      margin: 0 auto 16px;
+    }
+
     .body-copy strong { color: #ffffff; }
 
-    .benefits { list-style: none; padding: 0; margin: 18px auto 24px; max-width: 560px; text-align: left; }
-    .benefits li { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; font-size: 18px; line-height: 1.45; color: #ffffff; font-weight: 600; }
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin: 18px auto 24px;
+      max-width: 560px;
+      text-align: left;
+    }
 
-    .psych { font-size: 18px; line-height: 1.6; color: #d5dbea; max-width: 620px; margin: 0 auto 18px; }
+    .benefits li {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #ffffff;
+      font-weight: 600;
+    }
 
-    .foot { margin-top: 18px; text-align: center; font-size: 12px; line-height: 1.5; color: #9aa6bf; }
+    .psych {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #d5dbea;
+      max-width: 620px;
+      margin: 0 auto 18px;
+    }
+
+    .foot {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #9aa6bf;
+    }
 
     @media (max-width: 640px) {
       .wrap { padding: 20px 12px 34px; }
@@ -106,8 +216,9 @@
         See why more sleepers are switching away from traditional pillows.
       </div>
 
-      <!-- ✅ Botón 1 -->
-      <a class="cta js-out" href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+      <!-- ✅ BOTÓN 1: TRACK + REDIRECT -->
+      <a class="cta js-cta" data-cta="top"
+         href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
         SEE THE ERGONOMIC PILLOW →
       </a>
 
@@ -127,11 +238,13 @@
       </ul>
 
       <div class="psych">
-        Traditional pillows can let the neck sink into the wrong position while you sleep. This design is made to support a more natural resting angle.
+        Traditional pillows can let the neck sink into the wrong position while you sleep.
+        This design is made to support a more natural resting angle.
       </div>
 
-      <!-- ✅ Botón 2 -->
-      <a class="cta js-out" href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+      <!-- ✅ BOTÓN 2: TRACK + REDIRECT -->
+      <a class="cta js-cta" data-cta="bottom"
+         href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
         SEE HOW IT WORKS →
       </a>
     </div>
@@ -141,24 +254,30 @@
     </div>
   </div>
 
-  <!-- ✅ Evento al click (sin perder la redirección) -->
+  <!-- ✅ TRACK CLICKS EN AMBOS BOTONES -->
   <script>
     (function () {
-      function safeTrackAndGo(e) {
-        e.preventDefault();
-        var url = e.currentTarget.href;
+      var btns = document.querySelectorAll(".js-cta");
+      btns.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
 
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'OutboundClick', { destination: 'clickbank', url: url });
-        }
+          var url = btn.getAttribute("href");
+          var where = btn.getAttribute("data-cta") || "cta";
 
-        setTimeout(function () {
-          window.location.href = url;
-        }, 200);
-      }
+          // Evento principal
+          if (typeof fbq === "function") {
+            fbq("track", "Lead");
 
-      document.querySelectorAll('.js-out').forEach(function (btn) {
-        btn.addEventListener('click', safeTrackAndGo);
+            // Evento extra (opcional) para diferenciar botones
+            fbq("trackCustom", "OutboundClick", { button: where });
+          }
+
+          // Espera corta para que el evento viaje a Meta
+          setTimeout(function () {
+            window.location.href = url;
+          }, 350);
+        });
       });
     })();
   </script>

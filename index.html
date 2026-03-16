@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neck Support Guide</title>
+  <title>Neck Pain Sleep Guide</title>
 
   <!-- META PIXEL -->
   <script>
@@ -38,267 +38,519 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #07101f 0%, #061223 100%);
-      color: #ffffff;
+      background: #f3f5f9;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: #0a1830;
+      color: #d8e0ee;
+      font-size: 13px;
+      padding: 10px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .wrap {
-      max-width: 760px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 26px 16px 42px;
+      padding: 20px 14px 42px;
     }
 
-    .badge {
+    .article {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(16, 28, 51, 0.08);
+      overflow: hidden;
+      border: 1px solid rgba(17, 29, 52, 0.08);
+    }
+
+    .hero {
+      padding: 28px 22px 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-bottom: 1px solid rgba(20, 35, 60, 0.08);
+    }
+
+    .tag {
       display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 14px;
+      margin-bottom: 14px;
+      padding: 7px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.03);
-      color: #d2d8e3;
-      font-size: 13px;
-    }
-
-    .card {
-      background: #0b162a;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 30px 20px 32px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-      text-align: center;
+      background: #eef4ff;
+      color: #294166;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 44px;
-      line-height: 1.05;
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.08;
       font-weight: 800;
+      color: #0f1b31;
       letter-spacing: -0.6px;
-      color: #ffffff;
     }
 
-    .sub {
-      font-size: 24px;
-      line-height: 1.3;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0 auto 18px;
-      max-width: 620px;
-    }
-
-    .precta {
+    .subtitle {
       font-size: 22px;
-      line-height: 1.35;
-      font-weight: 800;
-      color: #ffffff;
-      margin: 0 auto 10px;
-      max-width: 640px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: #233552;
+      margin: 0 0 18px;
+      max-width: 760px;
     }
 
-    .precta-sub {
-      font-size: 17px;
-      line-height: 1.55;
-      color: #cfd6e4;
-      margin: 0 auto 14px;
-      max-width: 620px;
+    .author-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 18px;
     }
 
     .social-proof {
       display: inline-block;
-      margin: 0 auto 16px;
+      margin: 0 0 18px;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255, 173, 51, 0.10);
-      border: 1px solid rgba(255, 173, 51, 0.25);
-      color: #ffd27a;
-      font-size: 15px;
+      background: rgba(255, 166, 0, 0.10);
+      border: 1px solid rgba(255, 166, 0, 0.25);
+      color: #9a5a00;
+      font-size: 14px;
       font-weight: 700;
     }
 
     .cta {
       display: inline-block;
-      width: 100%;
-      max-width: 540px;
-      background: linear-gradient(180deg, #ff981f 0%, #ff8400 100%);
+      background: linear-gradient(180deg, #ff9a1f 0%, #ff8400 100%);
       color: #111111;
       text-decoration: none;
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
-      padding: 20px 18px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(255,132,0,0.30);
-      margin: 0 auto 10px;
-      cursor: pointer;
+      padding: 18px 26px;
+      border-radius: 14px;
+      box-shadow: 0 10px 26px rgba(255,132,0,0.22);
       transition: transform 0.12s ease, box-shadow 0.12s ease;
     }
 
     .cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 34px rgba(255,132,0,0.34);
-    }
-
-    .cta:active {
-      transform: translateY(1px);
+      box-shadow: 0 14px 30px rgba(255,132,0,0.28);
     }
 
     .cta-note {
-      font-size: 14px;
-      color: #cdd3e0;
-      margin-bottom: 18px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .content {
+      padding: 24px 22px 28px;
+    }
+
+    .lead {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #27364f;
+      margin: 0 0 18px;
+    }
+
+    .lead strong,
+    .copy strong {
+      color: #0f1b31;
     }
 
     .hero-image {
       width: 100%;
-      max-width: 620px;
       display: block;
-      margin: 0 auto 16px;
-      border-radius: 18px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      border-radius: 16px;
+      margin: 0 auto 20px;
+      box-shadow: 0 10px 25px rgba(15,27,49,0.08);
     }
 
-    .micro-proof {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0 auto 22px;
-      max-width: 620px;
+    .section-title {
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: #0f1b31;
+      margin: 26px 0 12px;
     }
 
-    .micro-proof span {
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
+    .copy {
+      font-size: 18px;
+      line-height: 1.75;
+      color: #32445f;
+      margin: 0 0 16px;
+    }
+
+    .highlight-box {
+      background: #f7f9fc;
+      border: 1px solid rgba(15,27,49,0.08);
+      border-left: 5px solid #ff8b00;
+      border-radius: 14px;
+      padding: 16px 16px;
+      margin: 18px 0 20px;
+      font-size: 17px;
+      color: #24334d;
       font-weight: 700;
-      color: #d7deea;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .body-copy {
-      font-size: 19px;
-      line-height: 1.6;
-      color: #d5dbea;
-      max-width: 620px;
-      margin: 0 auto 16px;
-    }
-
-    .body-copy strong {
-      color: #ffffff;
-    }
-
-    .benefits {
+    .bullet-list {
       list-style: none;
       padding: 0;
-      margin: 18px auto 24px;
-      max-width: 560px;
-      text-align: left;
+      margin: 0 0 20px;
     }
 
-    .benefits li {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+    .bullet-list li {
+      position: relative;
+      background: #f8fbff;
+      border: 1px solid rgba(17,29,52,0.08);
       border-radius: 14px;
-      padding: 14px 16px;
+      padding: 14px 16px 14px 44px;
       margin-bottom: 10px;
-      font-size: 18px;
-      line-height: 1.45;
-      color: #ffffff;
+      font-size: 17px;
+      color: #22314b;
       font-weight: 600;
     }
 
-    .psych {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #d5dbea;
-      max-width: 620px;
-      margin: 0 auto 18px;
+    .bullet-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      color: #0f7a34;
+      font-weight: 800;
     }
 
-    .foot {
-      margin-top: 18px;
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0 22px;
+    }
+
+    .compare-box {
+      border-radius: 16px;
+      padding: 18px 16px;
+      border: 1px solid rgba(17,29,52,0.08);
+      background: #fbfcfe;
+    }
+
+    .compare-box.bad {
+      background: #fff8f8;
+      border-color: rgba(185, 28, 28, 0.10);
+    }
+
+    .compare-box.good {
+      background: #f7fbff;
+      border-color: rgba(37, 99, 235, 0.12);
+    }
+
+    .compare-box h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0f1b31;
+    }
+
+    .compare-box ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #33445d;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .quote-wrap {
+      display: grid;
+      gap: 12px;
+      margin: 10px 0 24px;
+    }
+
+    .quote {
+      background: #f8fbff;
+      border: 1px solid rgba(17,29,52,0.08);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #33445d;
+    }
+
+    .quote strong {
+      color: #0f1b31;
+    }
+
+    .mid-cta {
+      background: linear-gradient(180deg, #0d1d38 0%, #0b1730 100%);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 24px 18px;
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .mid-cta h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .mid-cta p {
+      margin: 0 0 16px;
+      font-size: 17px;
+      color: #d1d9e8;
+      line-height: 1.6;
+    }
+
+    .faq {
+      margin-top: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(17,29,52,0.08);
+      border-radius: 14px;
+      padding: 16px;
+      background: #fbfcfe;
+      margin-bottom: 10px;
+    }
+
+    .faq-item h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 800;
+      color: #0f1b31;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #3a4a63;
+    }
+
+    .footer-note {
       text-align: center;
       font-size: 12px;
-      line-height: 1.5;
-      color: #9aa6bf;
+      color: #7a8699;
+      margin-top: 18px;
+      line-height: 1.6;
+      padding: 0 8px 22px;
     }
 
-    @media (max-width: 640px) {
-      .wrap { padding: 20px 12px 34px; }
-      .card { padding: 22px 16px 24px; }
-      h1 { font-size: 35px; }
-      .sub { font-size: 21px; }
-      .precta { font-size: 20px; }
-      .precta-sub, .body-copy, .psych { font-size: 17px; }
-      .benefits li { font-size: 17px; }
-      .cta { font-size: 20px; padding: 18px 16px; }
+    #stickyCTA {
+      position: fixed;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      width: calc(100% - 24px);
+      max-width: 720px;
+      display: none;
+      z-index: 9999;
+    }
+
+    .sticky-btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: linear-gradient(180deg, #ff9a1f 0%, #ff8400 100%);
+      color: #111111;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 16px 18px;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(255,132,0,0.28);
+    }
+
+    @media (max-width: 720px) {
+      h1 { font-size: 34px; }
+      .subtitle { font-size: 20px; }
+      .lead, .copy { font-size: 17px; }
+      .section-title { font-size: 24px; }
+      .compare { grid-template-columns: 1fr; }
+      .cta { width: 100%; text-align: center; }
+      .mid-cta h3 { font-size: 24px; }
     }
   </style>
 </head>
-
 <body>
+  <div class="topbar">Quick read: why some sleepers wake up with neck pain even after a full night in bed</div>
+
   <div class="wrap">
-    <div class="badge">Quick 20-second read</div>
+    <article class="article">
+      <div class="hero">
+        <div class="tag">Sleep Posture Guide</div>
 
-    <div class="card">
-      <h1>Waking up with neck pain?</h1>
+        <h1>Doctors say one common pillow mistake may be leaving sleepers with morning neck pain</h1>
 
-      <div class="sub">
-        It might not be your neck.<br>
-        It might be your pillow.
+        <div class="subtitle">
+          Many people never realize their pillow may be pushing the neck into the wrong position for 6–8 hours every night.
+        </div>
+
+        <div class="author-row">
+          <span>By Sleep & Wellness Desk</span>
+          <span>Updated today</span>
+          <span>4 min read</span>
+        </div>
+
+        <div class="social-proof">
+          ⭐ Popular ergonomic pillow design used by sleepers looking for better neck support
+        </div>
+
+        <a class="cta js-cta" data-cta="hero"
+           href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+          SEE HOW THE ERGONOMIC PILLOW WORKS →
+        </a>
+
+        <div class="cta-note">Short explanation + official product page</div>
       </div>
 
-      <div class="precta">
-        Most people never realize their pillow may be pushing the neck into the wrong position all night.
+      <div class="content">
+        <p class="lead">
+          Waking up with neck stiffness does not always mean there is something wrong with your neck itself.
+          In many cases, the real issue may be much simpler: <strong>the wrong pillow shape during sleep</strong>.
+        </p>
+
+        <img src="pillow.jpg" alt="Ergonomic pillow for neck support" class="hero-image">
+
+        <p class="copy">
+          Flat or unsupportive pillows can allow the head to sink too low or tilt at an awkward angle during the night.
+          That may increase pressure on the neck and shoulders, especially for <strong>side and back sleepers</strong>.
+        </p>
+
+        <div class="highlight-box">
+          The key issue is not just softness. It is whether the pillow helps keep the head and neck in a more natural sleeping position.
+        </div>
+
+        <h2 class="section-title">Why many traditional pillows may feel fine at first — but still create problems overnight</h2>
+
+        <p class="copy">
+          Most traditional pillows are designed like flat cushions. They may feel comfortable when you first lie down,
+          but after several hours they can compress, shift, or leave the neck unsupported.
+        </p>
+
+        <p class="copy">
+          Over time, that can make some sleepers wake up feeling stiff, sore, or like they need to stretch their neck right away.
+          This is one reason many people start looking for a more structured <strong>ergonomic contour design</strong>.
+        </p>
+
+        <ul class="bullet-list">
+          <li>Helps support the natural curve of the neck</li>
+          <li>Designed for side and back sleeping positions</li>
+          <li>May help reduce pressure caused by poor pillow alignment</li>
+          <li>Uses a more contoured shape instead of a flat surface</li>
+        </ul>
+
+        <h2 class="section-title">Traditional pillow vs ergonomic contour design</h2>
+
+        <div class="compare">
+          <div class="compare-box bad">
+            <h3>Traditional Pillow</h3>
+            <ul>
+              <li>Can flatten during the night</li>
+              <li>Less structure around the neck area</li>
+              <li>May allow the head to tilt too low</li>
+              <li>Often gives uneven support</li>
+            </ul>
+          </div>
+
+          <div class="compare-box good">
+            <h3>Ergonomic Design</h3>
+            <ul>
+              <li>Contoured shape for neck support</li>
+              <li>More structured feel while sleeping</li>
+              <li>Designed to better support head position</li>
+              <li>Popular with side and back sleepers</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="section-title">Why more sleepers are switching to contour-style pillows</h2>
+
+        <p class="copy">
+          Sleepers looking for better neck support often want one simple thing:
+          a pillow that is shaped to support the body more naturally instead of collapsing like a flat cushion.
+        </p>
+
+        <p class="copy">
+          That is why ergonomic pillow designs have become so popular. Instead of relying only on softness,
+          they focus on <strong>shape, support, and alignment</strong>.
+        </p>
+
+        <div class="quote-wrap">
+          <div class="quote">
+            <strong>“I didn’t realize how much my old pillow was affecting my neck until I switched to a contoured design.”</strong>
+          </div>
+          <div class="quote">
+            <strong>“The biggest difference was the shape. It felt like my head and neck were more supported during the night.”</strong>
+          </div>
+        </div>
+
+        <div class="mid-cta">
+          <h3>Want to see the ergonomic design people are talking about?</h3>
+          <p>
+            Take a quick look at the pillow shape, how it is designed, and why many sleepers are moving away from traditional flat pillows.
+          </p>
+          <a class="cta js-cta" data-cta="mid"
+             href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+            VIEW THE ERGONOMIC PILLOW →
+          </a>
+        </div>
+
+        <h2 class="section-title">Common questions sleepers ask</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h4>Is neck pain always caused by the pillow?</h4>
+            <p>
+              Not always. But for some sleepers, the pillow may play a bigger role than they realize, especially if it does not support the head and neck well during sleep.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Who usually looks for this kind of pillow?</h4>
+            <p>
+              People who wake up stiff, side sleepers, back sleepers, and anyone who feels like a flat pillow is not giving enough support through the night.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Why does shape matter so much?</h4>
+            <p>
+              Because shape influences how the head and neck rest for hours at a time. A more contoured design may help create a more supported sleeping position than a flat pillow.
+            </p>
+          </div>
+        </div>
+
+        <div class="mid-cta" style="margin-bottom: 8px;">
+          <h3>See the pillow design before you decide</h3>
+          <p>
+            Click below to view the product page and see how the contour shape is designed to support better neck alignment.
+          </p>
+          <a class="cta js-cta" data-cta="bottom"
+             href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+            SEE HOW IT WORKS →
+          </a>
+        </div>
+
+        <div class="footer-note">
+          *Results vary. This page is informational only and does not provide medical advice.*
+        </div>
       </div>
+    </article>
+  </div>
 
-      <div class="precta-sub">
-        Discover the ergonomic pillow design more sleepers are switching to for better neck support and deeper sleep.
-      </div>
-
-      <div class="social-proof">
-        ⭐ 4.7 average rating from sleepers who switched to ergonomic pillows
-      </div>
-
-      <a class="cta js-cta" data-cta="top"
-         href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
-        SEE HOW THIS PILLOW SUPPORTS YOUR NECK →
-      </a>
-
-      <div class="cta-note">Short explanation + product page</div>
-
-      <img src="pillow.jpg" alt="Ergonomic pillow" class="hero-image">
-
-      <div class="micro-proof">
-        <span>✔ Side & back sleepers</span>
-        <span>✔ Ergonomic contour design</span>
-        <span>✔ Better neck support</span>
-      </div>
-
-      <div class="body-copy">
-        Traditional pillows can force your neck into an <strong>unnatural angle</strong> for 6–8 hours every night.
-      </div>
-
-      <ul class="benefits">
-        <li>✔ Helps keep the cervical spine aligned</li>
-        <li>✔ Reduces pressure during sleep</li>
-        <li>✔ Designed for side and back sleepers</li>
-        <li>✔ Adaptive support foam</li>
-      </ul>
-
-      <div class="psych">
-        Click below to see how the ergonomic design works and why so many sleepers are replacing traditional pillows.
-      </div>
-
-      <a class="cta js-cta" data-cta="bottom"
-         href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
-        DISCOVER HOW THE DESIGN WORKS →
-      </a>
-    </div>
-
-    <div class="foot">
-      *Results vary. This page is informational only and does not provide medical advice.*
-    </div>
+  <div id="stickyCTA">
+    <a href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net" class="sticky-btn js-cta" data-cta="sticky">
+      SEE THE ERGONOMIC PILLOW →
+    </a>
   </div>
 
   <script>
@@ -321,6 +573,15 @@
             window.location.href = url;
           }, 350);
         });
+      });
+
+      window.addEventListener("scroll", function () {
+        var sticky = document.getElementById("stickyCTA");
+        if (window.scrollY > 500) {
+          sticky.style.display = "block";
+        } else {
+          sticky.style.display = "none";
+        }
       });
     })();
   </script>

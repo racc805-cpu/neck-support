@@ -404,8 +404,7 @@
           ⭐ Popular ergonomic pillow design used by sleepers looking for better neck support
         </div>
 
-        <a class="cta js-cta" data-cta="hero"
-           href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+        <a class="cta js-cta" data-cta="hero" href="#">
           SEE HOW THE ERGONOMIC PILLOW WORKS →
         </a>
 
@@ -498,8 +497,7 @@
           <p>
             Take a quick look at the pillow shape, how it is designed, and why many sleepers are moving away from traditional flat pillows.
           </p>
-          <a class="cta js-cta" data-cta="mid"
-             href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+          <a class="cta js-cta" data-cta="mid" href="#">
             VIEW THE ERGONOMIC PILLOW →
           </a>
         </div>
@@ -534,8 +532,7 @@
           <p>
             Click below to view the product page and see how the contour shape is designed to support better neck alignment.
           </p>
-          <a class="cta js-cta" data-cta="bottom"
-             href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net">
+          <a class="cta js-cta" data-cta="bottom" href="#">
             SEE HOW IT WORKS →
           </a>
         </div>
@@ -548,25 +545,34 @@
   </div>
 
   <div id="stickyCTA">
-    <a href="https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net" class="sticky-btn js-cta" data-cta="sticky">
+    <a href="#" class="sticky-btn js-cta" data-cta="sticky">
       SEE THE ERGONOMIC PILLOW →
     </a>
   </div>
 
   <script>
     (function () {
+      var tidMap = {
+        hero: "adv_top",
+        mid: "adv_mid",
+        bottom: "adv_bottom",
+        sticky: "adv_sticky"
+      };
+
+      var baseHoplink = "https://d65b2p-g24r1mr25sgwipz-e-l.hop.clickbank.net/?tid=";
       var btns = document.querySelectorAll(".js-cta");
 
       btns.forEach(function (btn) {
         btn.addEventListener("click", function (e) {
           e.preventDefault();
 
-          var url = btn.getAttribute("href");
           var where = btn.getAttribute("data-cta") || "cta";
+          var tid = tidMap[where] || "adv_other";
+          var url = baseHoplink + encodeURIComponent(tid);
 
           if (typeof fbq === "function") {
             fbq("track", "InitiateCheckout");
-            fbq("trackCustom", "OutboundClick", { button: where });
+            fbq("trackCustom", "OutboundClick", { button: where, tid: tid });
           }
 
           setTimeout(function () {

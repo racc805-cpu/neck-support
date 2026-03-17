@@ -98,8 +98,17 @@
       line-height: 1.4;
       font-weight: 700;
       color: #233552;
+      margin: 0 0 12px;
+      max-width: 760px;
+    }
+
+    .hero-pain {
+      font-size: 18px;
+      line-height: 1.65;
+      color: #32445f;
       margin: 0 0 18px;
       max-width: 760px;
+      font-weight: 600;
     }
 
     .author-row {
@@ -113,7 +122,7 @@
 
     .social-proof {
       display: inline-block;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       padding: 10px 14px;
       border-radius: 999px;
       background: rgba(255, 166, 0, 0.10);
@@ -121,6 +130,10 @@
       color: #9a5a00;
       font-size: 14px;
       font-weight: 700;
+    }
+
+    .cta-wrap-top {
+      margin: 8px 0 18px;
     }
 
     .cta {
@@ -142,9 +155,16 @@
     }
 
     .cta-note {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 13px;
       color: #6b7280;
+    }
+
+    .urgency-note {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #a85b00;
+      font-weight: 700;
     }
 
     .content {
@@ -372,7 +392,7 @@
     @media (max-width: 720px) {
       h1 { font-size: 34px; }
       .subtitle { font-size: 20px; }
-      .lead, .copy { font-size: 17px; }
+      .hero-pain, .lead, .copy { font-size: 17px; }
       .section-title { font-size: 24px; }
       .compare { grid-template-columns: 1fr; }
       .cta { width: 100%; text-align: center; }
@@ -390,8 +410,19 @@
 
         <h1>Doctors say one common pillow mistake may be leaving sleepers with morning neck pain</h1>
 
+        <a class="cta js-cta" data-cta="hero" href="#">
+          WATCH THE 30-SECOND DEMO →
+        </a>
+
+        <div class="cta-note">Quick explanation + official product page</div>
+        <div class="urgency-note">⚠️ Limited stock available today</div>
+
         <div class="subtitle">
           Many people never realize their pillow may be pushing the neck into the wrong position for 6–8 hours every night.
+        </div>
+
+        <div class="hero-pain">
+          If your neck feels stiff when you wake up, the issue may not be your mattress or your age — it may simply be the wrong pillow shape.
         </div>
 
         <div class="author-row">
@@ -404,11 +435,13 @@
           ⭐ Popular ergonomic pillow design used by sleepers looking for better neck support
         </div>
 
-        <a class="cta js-cta" data-cta="hero" href="#">
-          SEE HOW THE ERGONOMIC PILLOW WORKS →
-        </a>
-
-        <div class="cta-note">Short explanation + official product page</div>
+        <div class="cta-wrap-top">
+          <a class="cta js-cta" data-cta="hero" href="#">
+            SEE WHY THIS PILLOW IS SELLING OUT →
+          </a>
+          <div class="cta-note">Short explanation + official product page</div>
+          <div class="urgency-note">⚠️ Limited stock available today</div>
+        </div>
       </div>
 
       <div class="content">
@@ -498,8 +531,9 @@
             Take a quick look at the pillow shape, how it is designed, and why many sleepers are moving away from traditional flat pillows.
           </p>
           <a class="cta js-cta" data-cta="mid" href="#">
-            VIEW THE ERGONOMIC PILLOW →
+            WATCH THE 30-SECOND DEMO →
           </a>
+          <div class="urgency-note" style="color:#ffd27a;">⚠️ Popular choice today</div>
         </div>
 
         <h2 class="section-title">Common questions sleepers ask</h2>
@@ -533,8 +567,9 @@
             Click below to view the product page and see how the contour shape is designed to support better neck alignment.
           </p>
           <a class="cta js-cta" data-cta="bottom" href="#">
-            SEE HOW IT WORKS →
+            SEE WHY THIS PILLOW IS SELLING OUT →
           </a>
+          <div class="urgency-note" style="color:#ffd27a;">⚠️ Limited stock available today</div>
         </div>
 
         <div class="footer-note">
@@ -546,7 +581,7 @@
 
   <div id="stickyCTA">
     <a href="#" class="sticky-btn js-cta" data-cta="sticky">
-      SEE THE ERGONOMIC PILLOW →
+      WATCH THE 30-SECOND DEMO →
     </a>
   </div>
 
